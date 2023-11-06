@@ -1,0 +1,24 @@
+DML : SIUP
+Select, Insert, Update, Delete;
+
+USE database1;
+
+SELECT * FROM Employee_DB;
+
+SELECT emp_no
+FROM Employee_DB
+WHERE emp_no = NULL;
+
+INSERT INTO employee_db
+(emp_no,emp_name)
+VALUES
+(1, "ABC"),
+(2, "DEF"),
+(3, "XYZ");
+
+
+UPDATE employee_db
+SET emp_no = 4
+WHERE emp_name = "ABC";
+
+DELETE FROM employee_db WHERE emp_no > 3;

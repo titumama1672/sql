@@ -1,0 +1,11 @@
+USE database1;
+
+Select MIN(emp_no) from employee_db;
+
+SELECT Max(emp_no) from employee_db;
+
+SELECT SUM(emp_no) from employee_db;
+
+SELECT AVG(emp_no) from employee_db;
+
+SELECT COUNT(emp_name) from employee_db;

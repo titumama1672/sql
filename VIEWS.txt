@@ -1,0 +1,16 @@
+VIEWS 
+
+USE database1;
+
+CREATE VIEW imp_info as 
+SELECT emp_no, emp_name
+FROM employee_db
+WHERE emp_no IS NOT NULL;
+
+SELECT * FROM imp_info;
+
+UPDATE imp_info
+SET emp_name = "EMPTY" 
+WHERE emp_name IS NULL;
+
+DROP VIEW imp_info;

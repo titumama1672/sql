@@ -1,0 +1,20 @@
+DDL: CATDR
+Create, Alter, Truncate, Drop, Rename;
+
+CREATE Database Database1;
+USE Database1;
+
+CREATE TABLE Employee(
+emp_no int primary key,
+emp_name varchar(50),
+emp_sal int
+);
+
+ALTER TABLE Employee
+Add emp_add varchar(50);
+
+TRUNCATE TABLE Employee;
+
+DROP TABLE Employee;
+
+RENAME TABLE Employee to Employee_DB;

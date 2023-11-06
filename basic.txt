@@ -1,0 +1,39 @@
+BASIC SQL Queries
+UNION, UNION ALL, INTERSECT, MINUS;
+
+USE database1;
+
+SELECT emp_no from employee_db
+Union 
+Select product_id from product_db;
+
+SELECT emp_no from employee_db
+Union All
+Select product_id from product_db;
+
+SELECT emp_no from employee_db
+INTERSECT
+SELECT product_id from product_db;
+
+Insert INTO product_db
+(product_id)
+Values
+(0),
+(10),
+(100),
+(1000);
+
+Create table product_db(
+product_id int
+
+);
+
+drop table product_db;
+
+
+Select emp_no from employee_db
+MINUS
+Select product_id from product_db;
+
+
+

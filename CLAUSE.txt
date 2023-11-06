@@ -1,0 +1,16 @@
+COMPLEX SQL QUERIES, CLAUSES
+WHERE, DISTINCT, GROUP BY, ORDER BY;
+
+USE database1;
+Select emp_no from employee_db
+where emp_no IS NOT NULL;
+
+SELECT distinct(emp_name) from employee_db;
+
+SELECT emp_no , emp_name
+FROM employee_db
+WHERE emp_no IS NOT NULL
+GROUP BY emp_name, emp_no;
+
+SELECT * FROM employee_db order by emp_no desc;
+//ascending order is in-built but have to use desc keyword for descending.

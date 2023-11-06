@@ -1,0 +1,48 @@
+JOIN: INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER.
+
+USE database1;
+
+
+CREATE TABLE product_db(
+product_id int primary key,
+product_name varchar(50),
+product_price int
+);
+
+INSERT INTO employee_db
+(emp_no)
+VALUES
+(101),
+(102),
+(103),
+(104);
+
+INSERT INTO product_db
+(product_id)
+VALUES
+(101),
+(105),
+(107),
+(109);
+
+
+SELECT emp_no from employee_db
+INNER JOIN product_db
+ON employee_db.emp_no = product_db.product_id;
+
+SELECT emp_no from employee_db
+LEFT OUTER JOIN product_db
+ON employee_db.emp_no = product_db.product_id;
+
+SELECT product_id from product_db
+RIGHT OUTER JOIN employee_db
+ON employee_db.emp_no = product_db.product_id;
+
+SELECT emp_no from employee_db
+LEFT OUTER JOIN product_db
+ON employee_db.emp_no = product_db.product_id
+UNION
+SELECT emp_no from employee_db
+RIGHT OUTER JOIN product_db
+ON employee_db.emp_no = product_db.product_id;
+
